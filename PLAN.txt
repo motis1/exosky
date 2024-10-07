@@ -1,0 +1,18 @@
+- A React app utilzing react-three-fiber
+
+- Visualize Exoplanets using a NASA database
+
+- Exoplanet Component
+    - Pass relevant data (distance, mass, eccentricity, rotational period, orbital period...)
+    - Compute random attributes like color and other visual effects by using a hash of the name of the exoplanet and generating psuedo-random numbers from it
+    - The planet rotates according to its rotational period and orbits according to its orbital period
+    - Clickable, when hovered, increase size and make it glow
+
+- ExoplanetDisplay Component
+    - Viewport can be zoomed in and out using scroll wheel
+    - Viewport can be panned using mouse-wheel-down
+    - Earth at the center, all exoplanets surround it
+
+- DetailTable
+    - Have dots ("....") in between the name and the value and have it spaced evenly
+    - Terminal like

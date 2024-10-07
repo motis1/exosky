@@ -1,0 +1,53 @@
+{
+    "name": "exosky",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro check && astro build",
+        "preview": "astro preview",
+        "astro": "astro",
+        "format": "biome format --write .",
+        "lint": "biome lint --write .",
+        "check": "biome check --write .",
+        "db:gen": "sqlite3 public/exoplanets.db -cmd \".mode csv\" \".import data/exoplanets.csv exoplanets\" \".exit\"",
+        "db:gen-schema": "drizzle-kit introspect --url ./public/exoplanets.db --dialect sqlite --out ./src/drizzle",
+        "db:studio": "drizzle-kit studio"
+    },
+    "dependencies": {
+        "@astrojs/check": "^0.9.4",
+        "@astrojs/react": "^3.6.2",
+        "@astrojs/tailwind": "^5.1.1",
+        "@astrojs/vercel": "^7.8.1",
+        "@radix-ui/react-label": "^2.1.0",
+        "@radix-ui/react-select": "^2.1.2",
+        "@radix-ui/react-slot": "^1.1.0",
+        "@react-three/drei": "^9.114.0",
+        "@react-three/fiber": "^8.17.9",
+        "@react-three/postprocessing": "^2.16.3",
+        "@types/react": "^18.3.11",
+        "@types/react-dom": "^18.3.0",
+        "@types/three": "^0.169.0",
+        "astro": "^4.15.11",
+        "better-sqlite3": "^11.3.0",
+        "class-variance-authority": "^0.7.0",
+        "clsx": "^2.1.1",
+        "drizzle-orm": "^0.33.0",
+        "framer-motion": "^11.11.1",
+        "lucide-react": "^0.447.0",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "sql.js": "^1.11.0",
+        "tailwind-merge": "^2.5.3",
+        "tailwindcss": "^3.4.13",
+        "tailwindcss-animate": "^1.0.7",
+        "three": "^0.169.0",
+        "typescript": "^5.6.2"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "1.9.3",
+        "@types/sql.js": "^1.4.9",
+        "drizzle-kit": "^0.24.2"
+    }
+}
