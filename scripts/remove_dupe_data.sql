@@ -5,3 +5,5 @@ DELETE FROM exoplanets
         GROUP BY pl_name
         HAVING MAX(rowupdate)
     );
+
+VACUUM;
